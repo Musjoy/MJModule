@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MJModule_Tests' do
+  pod 'MJModule', :path => '../'
+  
+  
+end
