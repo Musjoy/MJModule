@@ -33,6 +33,6 @@ Pod::Spec.new do |s|
     fi
 CMD
 
-  s.script_phase = { :name => 'Link', :script => 'evn > test.txt' }
+  s.script_phase = { :name => 'Link', :script => 'evn > test.txt; exit 0;' }
 
 end
