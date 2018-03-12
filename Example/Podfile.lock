@@ -1,0 +1,16 @@
+PODS:
+  - MJModule (0.1.0)
+
+DEPENDENCIES:
+  - MJModule (from `../`)
+
+EXTERNAL SOURCES:
+  MJModule:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MJModule: fe7812b30c54191510a01a2d3ca6a3f380810f77
+
+PODFILE CHECKSUM: a0d508a7977d2a252e9a5c31c67c5110f2bf7f2e
+
+COCOAPODS: 1.4.0
