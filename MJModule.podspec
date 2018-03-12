@@ -19,16 +19,17 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MJModule/*','Public/*'
+  s.source_files = 'MJModule/*','MJModule/Public/*'
   s.user_target_xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-D MODULE'
   }
 
   s.prepare_command = <<-CMD
+    cd MJModule
     if [ ! -d "Public/" ];then
     mkdir Public
     cd Public
-    ln -s ../../Public/*.swift .
+    ln -s ../../../Public/*.swift .
     fi
 CMD
 
