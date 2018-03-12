@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MJModule'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.swift_version    = '3.2'
   s.summary          = 'This is a module management center in swift'
 
