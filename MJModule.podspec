@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MJModule'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.swift_version    = '3.2'
   s.summary          = 'This is a module management center in swift'
 
@@ -19,13 +19,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MJModule/*','MJModule/Public/*'
+  s.source_files = 'MJModule/Classes/*.swift','MJModule/Public/*'
   s.user_target_xcconfig = {
     'OTHER_SWIFT_FLAGS' => '-D MODULE'
   }
 
   s.prepare_command = <<-CMD
-    cd MJModule
     if [ ! -d "Public/" ];then
     mkdir Public
     cd Public
@@ -33,6 +32,6 @@ Pod::Spec.new do |s|
     fi
 CMD
 
-  s.script_phase = { :name => 'Link', :script => 'evn > test.txt; exit 0;' }
+  s.script_phase = { :name => 'Link', :script => 'env > test.txt; exit 0;' }
 
 end
