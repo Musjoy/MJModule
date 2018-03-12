@@ -24,12 +24,14 @@ Pod::Spec.new do |s|
     'OTHER_SWIFT_FLAGS' => '-D MODULE'
   }
 
-s.prepare_command = <<-CMD
-if [ ! -d "Public/" ];then
-mkdir Public
-cd Public
-ln -s ../../Public/*.swift .
-fi
+  s.prepare_command = <<-CMD
+    if [ ! -d "Public/" ];then
+    mkdir Public
+    cd Public
+    ln -s ../../Public/*.swift .
+    fi
 CMD
+
+  s.script_phase = { :name => 'Link', :script => 'evn > test.txt' }
 
 end
